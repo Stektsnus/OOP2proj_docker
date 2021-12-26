@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  database:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=sebastian
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-db:/data/db
+volumes:
+  mongo-db:
